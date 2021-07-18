@@ -4,10 +4,11 @@ import com.sfgdi.sfgdi.model.Pet;
 
 import java.util.Set;
 
-public interface PetService {
-    String getPetType();
-
+public interface VetService {
     Pet findById(Long id);
-    Pet save(Pet pet);
+
+    Pet save(Pet owner);
+
     Set<Pet> findAll();
 }
+

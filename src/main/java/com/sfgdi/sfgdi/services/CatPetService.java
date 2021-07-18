@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Profile("cat")
 @Service()
-public class CatPetService implements PetService{
+public abstract class CatPetService implements PetService{
     @Override
     public String getPetType() {
         return "Cat Are The Best";
