@@ -1,14 +1,8 @@
 package com.sfgdi.sfgdi.services;
 
-import com.sfgdi.sfgdi.model.Pet;
+import com.sfgdi.sfgdi.model.Vet;
 
-import java.util.Set;
 
-public interface VetService {
-    Pet findById(Long id);
-
-    Pet save(Pet owner);
-
-    Set<Pet> findAll();
+public interface VetService extends CrudService<Vet, Long> {
 }
 
