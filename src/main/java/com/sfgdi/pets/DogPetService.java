@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Profile("dog")
-@Service("AnimalService")
+//@Profile("dog")
+//@Service("AnimalService")
 public  class DogPetService implements PetService {
     @Override
     public String getPetType() {
