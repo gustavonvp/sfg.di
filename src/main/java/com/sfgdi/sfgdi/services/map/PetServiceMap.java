@@ -1,11 +1,11 @@
 package com.sfgdi.sfgdi.services.map;
 
+import com.sfgdi.pets.PetService;
 import com.sfgdi.sfgdi.model.Pet;
-import com.sfgdi.sfgdi.services.CrudService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findALl() {
@@ -31,4 +31,8 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements Crud
         super.deleteById(id);
     }
 
+    @Override
+    public String getPetType() {
+        return null;
+    }
 }
