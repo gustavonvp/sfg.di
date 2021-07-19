@@ -1,6 +1,5 @@
 package com.sfgdi.sfgdi.services;
 
-import org.springframework.stereotype.Service;
 
 
 public class ConstructorGreetingService implements GreetingService {

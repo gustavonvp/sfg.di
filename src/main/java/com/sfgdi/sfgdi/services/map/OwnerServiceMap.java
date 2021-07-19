@@ -2,9 +2,12 @@ package com.sfgdi.sfgdi.services.map;
 
 import com.sfgdi.sfgdi.services.Owner;
 import com.sfgdi.sfgdi.services.OwnerService;
+import org.springframework.stereotype.Service;
+
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override

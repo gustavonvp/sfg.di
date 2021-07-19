@@ -2,9 +2,12 @@ package com.sfgdi.sfgdi.services.map;
 
 import com.sfgdi.sfgdi.model.Vet;
 import com.sfgdi.sfgdi.services.VetService;
+import org.springframework.stereotype.Service;
+
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService{
 
     @Override
