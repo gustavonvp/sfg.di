@@ -1,6 +1,9 @@
 spring:
   profiles:
-        active: dog,EN,qa
+        active:
+            - dog
+            - EN
+            - dev
   banner:
     location: banner.txt
     banner-mode: console
@@ -8,3 +11,12 @@ sfgdi:
       username: YmlUserName
       password: YmlPassword
       jdbcurl: YmlUrl
+
+---
+
+spring:
+  profiles: prod
+sfgdi:
+  username: YmlProdUserName
+  password: YmlProdPassword
+  jdbcurl: YmlProdUrl
