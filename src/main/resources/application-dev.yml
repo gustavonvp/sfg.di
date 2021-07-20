@@ -1,0 +1,4 @@
+sfgdi:
+  username: YmlDevName
+  password: YmlDevPassword
+  jdbcurl: YmlDevUrl
