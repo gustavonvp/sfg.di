@@ -2,11 +2,13 @@ spring:
   profiles:
         active:
             - dog
-            - EN
+            - ES
             - dev
   banner:
     location: banner.txt
     banner-mode: console
+  messages:
+    basename: messages/messages
 sfgdi:
       username: YmlUserName
       password: YmlPassword
