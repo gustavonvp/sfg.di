@@ -2,10 +2,12 @@ package com.sfgdi.sfgdi.services.map;
 
 import com.sfgdi.pets.PetService;
 import com.sfgdi.sfgdi.model.Pet;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Primary
 @Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
@@ -21,7 +23,7 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetS
 
     @Override
     public Pet save(Pet object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
