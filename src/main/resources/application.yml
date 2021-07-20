@@ -1,0 +1,10 @@
+spring:
+  profiles:
+        active: dog,EN,qa
+  banner:
+    location: banner.txt
+    banner-mode: console
+sfgdi:
+      username: YmlUserName
+      password: YmlPassword
+      jdbcurl: YmlUrl
