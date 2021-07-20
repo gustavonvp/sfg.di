@@ -2,9 +2,11 @@ package com.sfgdi.sfgdi.services.map;
 
 import com.sfgdi.sfgdi.model.PetType;
 import com.sfgdi.sfgdi.services.PetTypeService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
 
 

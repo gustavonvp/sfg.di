@@ -2,10 +2,11 @@ package com.sfgdi.sfgdi.services.map;
 
 import com.sfgdi.pets.PetService;
 import com.sfgdi.sfgdi.model.Pet;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
