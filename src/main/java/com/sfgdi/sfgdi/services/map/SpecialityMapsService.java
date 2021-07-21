@@ -1,13 +1,13 @@
 package com.sfgdi.sfgdi.services.map;
 
 import com.sfgdi.sfgdi.model.Speciality;
-import com.sfgdi.sfgdi.services.SpecialtiesService;
+import com.sfgdi.sfgdi.services.SpecialtyService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class SpecialityMapsService extends AbstractMapService<Speciality, Long> implements SpecialtiesService {
+public class SpecialityMapsService extends AbstractMapService<Speciality, Long> implements SpecialtyService {
 
     @Override
     public Set<Speciality> findALl() {
