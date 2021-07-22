@@ -2,16 +2,12 @@ package com.sfgdi.sfgdi.services.map;
 
 import com.sfgdi.sfgdi.model.Visit;
 import com.sfgdi.sfgdi.services.VisitService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
-
-    private final VisitService visitService;
-
-    public VisitMapService(VisitService visitService) {
-        this.visitService = visitService;
-    }
 
     @Override
     public Set<Visit> findALl() {
@@ -38,7 +34,7 @@ public class VisitMapService extends AbstractMapService<Visit, Long> implements 
     }
 
     @Override
-    public void delete( Visit object) {
+    public void delete(Visit object) {
         super.delete(object);
     }
 

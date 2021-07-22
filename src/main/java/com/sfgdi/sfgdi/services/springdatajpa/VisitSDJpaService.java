@@ -3,10 +3,14 @@ package com.sfgdi.sfgdi.services.springdatajpa;
 import com.sfgdi.sfgdi.model.Visit;
 import com.sfgdi.sfgdi.repositories.VisitRepository;
 import com.sfgdi.sfgdi.services.VisitService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
+@Profile("springdatajpa")
 public class VisitSDJpaService implements VisitService {
 
     private final VisitRepository visitRepository;
