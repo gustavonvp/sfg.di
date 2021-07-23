@@ -1,6 +1,6 @@
 package com.sfgdi.sfgdi.config;
 
-import com.sfgdi.pets.PetService;
+import com.sfgdi.sfgdi.services.PetService;
 import com.sfgdi.pets.PetServiceFactory;
 import com.sfgdi.sfgdi.datasource.FakeDataSource;
 import com.sfgdi.sfgdi.repositories.EnglishGreetingRepository;
@@ -60,7 +60,6 @@ public class GreetingServiceConfig {
         return new I18nEnglishGreetingService(englishGreetingRepository);
     }
 
-    @Primary
     @Bean
     PrimaryGreetingService primaryGreetingService() {
         return new PrimaryGreetingService();

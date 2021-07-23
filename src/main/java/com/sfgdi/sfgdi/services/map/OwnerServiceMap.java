@@ -1,17 +1,19 @@
 package com.sfgdi.sfgdi.services.map;
 
-import com.sfgdi.pets.PetService;
+import com.sfgdi.sfgdi.services.PetService;
 import com.sfgdi.sfgdi.model.Owner;
 import com.sfgdi.sfgdi.model.Pet;
 import com.sfgdi.sfgdi.services.OwnerService;
 import com.sfgdi.sfgdi.services.PetTypeService;;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 
 import java.util.Set;
 
 @Service
+@Profile("map")
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;

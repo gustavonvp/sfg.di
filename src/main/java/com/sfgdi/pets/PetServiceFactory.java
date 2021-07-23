@@ -1,5 +1,7 @@
 package com.sfgdi.pets;
 
+import com.sfgdi.sfgdi.services.PetService;
+
 public class PetServiceFactory {
     public PetService getPetService(String petType){
         switch (petType){

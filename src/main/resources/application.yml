@@ -4,6 +4,7 @@ spring:
             - dog
             - ES
             - dev
+            - map
   banner:
     location: banner.txt
     banner-mode: console

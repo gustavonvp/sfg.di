@@ -2,11 +2,13 @@ package com.sfgdi.sfgdi.services.map;
 
 import com.sfgdi.sfgdi.model.Speciality;
 import com.sfgdi.sfgdi.services.SpecialtyService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile("map")
 public class SpecialityMapsService extends AbstractMapService<Speciality, Long> implements SpecialtyService {
 
     @Override

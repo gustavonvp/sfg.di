@@ -1,4 +1,4 @@
-package com.sfgdi.pets;
+package com.sfgdi.sfgdi.services;
 
 import com.sfgdi.sfgdi.model.Pet;
 import com.sfgdi.sfgdi.services.CrudService;

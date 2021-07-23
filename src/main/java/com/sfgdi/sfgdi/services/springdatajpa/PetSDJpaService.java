@@ -1,6 +1,6 @@
 package com.sfgdi.sfgdi.services.springdatajpa;
 
-import com.sfgdi.pets.PetService;
+import com.sfgdi.sfgdi.services.PetService;
 import com.sfgdi.sfgdi.model.Pet;
 import com.sfgdi.sfgdi.repositories.PetRepository;
 

@@ -4,12 +4,14 @@ import com.sfgdi.sfgdi.model.Speciality;
 import com.sfgdi.sfgdi.model.Vet;
 import com.sfgdi.sfgdi.services.SpecialtyService;
 import com.sfgdi.sfgdi.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 
 import java.util.Set;
 
 @Service
+@Profile("map")
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService{
 
     private final SpecialtyService specialtyService;

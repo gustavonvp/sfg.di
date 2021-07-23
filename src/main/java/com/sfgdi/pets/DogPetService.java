@@ -1,13 +1,13 @@
 package com.sfgdi.pets;
 
 import com.sfgdi.sfgdi.model.Pet;
-import org.springframework.context.annotation.Profile;
+import com.sfgdi.sfgdi.services.PetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 //@Profile("dog")
-//@Service("AnimalService")
+
 public  class DogPetService implements PetService {
     @Override
     public String getPetType() {
