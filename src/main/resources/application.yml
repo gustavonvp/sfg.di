@@ -1,7 +1,6 @@
 spring:
   profiles:
         active:
-            - dog
             - ES
             - dev
             - map
