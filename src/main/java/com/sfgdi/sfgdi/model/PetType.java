@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Entity
 @ToString
 @Table(name = "types")
