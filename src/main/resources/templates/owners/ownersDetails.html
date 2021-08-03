@@ -3,10 +3,12 @@
 <html xmlns:th="https://www.thymeleaf.org"
       th:replace="~{fragments/layout :: layout (~{::body}, 'owners')}">
 <body>
-
+<!--/*@thymesVar id="owner" type="com.sfgdi.sfgdi.model.Owner"*/-->
+<!--/*@thymesVar id="petType" type="com.sfgdi.sfgdi.model.PetType"*/-->
+<!--/*@thymesVar id="visits" type="com.sfgdi.sfgdi.model.Visit"*/-->
   <h2>Owner Information</h2>
 
-<!--/*@thymesVar id="owner" type="com.sfgdi.sfgdi.model.Owner"*/-->
+
 <table class="table table-striped" th:object="${owner}">
   <tr>
     <th>Name</th>
