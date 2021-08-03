@@ -1,20 +1,41 @@
+
+###
+#   Database Settings
+###
+
 spring:
   profiles:
-        active:
-            - ES
-            - dev
-            - map
+    active:
+      - ES
+      - dev
+      - map
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 777g
+  jpa:
+    hibernate.ddl-auto: create
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+        open-in-view: false
+    database: mysql
   banner:
     location: banner.txt
     banner-mode: console
-  messages:
-    basename: messages/messages
 sfgdi:
       username: YmlUserName
       password: YmlPassword
       jdbcurl: YmlUrl
 
+
 ---
+
 
 spring:
   profiles: prod
@@ -22,3 +43,10 @@ sfgdi:
   username: YmlProdUserName
   password: YmlProdPassword
   jdbcurl: YmlProdUrl
+
+
+
+
+
+
+
