@@ -8,12 +8,8 @@ import org.springframework.stereotype.Service;
 import java.util.Set;
 
 
-
 public  class CatPetService implements PetService {
-    @Override
-    public String getPetType() {
-        return "Cat";
-    }
+
 
     @Override
     public Set<Pet> findALl() {
@@ -38,5 +34,11 @@ public  class CatPetService implements PetService {
     @Override
     public void deleteById(Long aLong) {
 
+    }
+
+    @Override
+    public PetService getPetService(String petType) {
+        petType = "";
+        return getPetService(petType);
     }
 }

@@ -8,8 +8,6 @@ import org.springframework.stereotype.Service;
 import java.util.Set;
 
 
-@Service
-@Profile("factory")
 public class PetServiceFactory implements PetService {
     public PetService getPetService(String petType){
         switch (petType){
@@ -49,8 +47,4 @@ public class PetServiceFactory implements PetService {
 
     }
 
-    @Override
-    public String getPetType() {
-        return null;
-    }
 }

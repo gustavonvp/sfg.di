@@ -10,10 +10,7 @@ import java.util.Set;
 
 
 public  class DogPetService implements PetService {
-    @Override
-    public String getPetType() {
-        return "Dog";
-    }
+
 
     @Override
     public Set<Pet> findALl() {
@@ -38,5 +35,12 @@ public  class DogPetService implements PetService {
     @Override
     public void deleteById(Long aLong) {
 
+    }
+
+    @Override
+    public PetService getPetService(String petType) {
+
+        petType = "";
+        return getPetService(petType);
     }
 }

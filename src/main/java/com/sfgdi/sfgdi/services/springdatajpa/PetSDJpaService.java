@@ -3,21 +3,20 @@ package com.sfgdi.sfgdi.services.springdatajpa;
 import com.sfgdi.sfgdi.services.PetService;
 import com.sfgdi.sfgdi.model.Pet;
 import com.sfgdi.sfgdi.repositories.PetRepository;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
+@Profile("springdatajpa")
 public class PetSDJpaService implements PetService {
 
     private final PetRepository petRepository;
 
     public PetSDJpaService(PetRepository petRepository) {
         this.petRepository = petRepository;
-    }
-
-    @Override
-    public String getPetType() {
-        return null;
     }
 
     @Override
@@ -45,5 +44,10 @@ public class PetSDJpaService implements PetService {
     @Override
     public void deleteById(Long aLong) {
         petRepository.deleteById(aLong);
+    }
+
+    @Override
+    public PetService getPetService(String petType) {
+        return getPetService(petType);
     }
 }

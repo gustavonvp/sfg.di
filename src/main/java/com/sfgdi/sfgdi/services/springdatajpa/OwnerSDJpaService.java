@@ -5,6 +5,7 @@ import com.sfgdi.sfgdi.repositories.OwnerRepository;
 import com.sfgdi.sfgdi.repositories.PetRepository;
 import com.sfgdi.sfgdi.repositories.PetTypeRepository;
 import com.sfgdi.sfgdi.services.OwnerService;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 

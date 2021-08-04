@@ -30,7 +30,7 @@ public class PetController {
     private final PetTypeService petTypeService;
 
 
-    public PetController(@Qualifier("petServiceFactory") PetService petService, OwnerService ownerService, PetTypeService petTypeService) {
+    public PetController(@Qualifier("petSDJpaService") PetService petService, OwnerService ownerService, PetTypeService petTypeService) {
         this.petService = petService;
         this.ownerService = ownerService;
         this.petTypeService = petTypeService;
@@ -93,6 +93,5 @@ public class PetController {
                     return "redirect:/owners/" + owner.getId();
         }
     }
-    public String whichPetIsTheBest() { return petService.getPetType();}
 
 }

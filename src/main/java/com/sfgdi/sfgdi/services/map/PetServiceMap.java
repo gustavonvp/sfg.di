@@ -36,8 +36,10 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetS
         super.deleteById(id);
     }
 
+
     @Override
-    public String getPetType() {
-        return "Dog";
+    public PetService getPetService(String petType) {
+        petType = "";
+        return getPetService(petType);
     }
 }

@@ -19,7 +19,7 @@ public class VisitController {
     private final VisitService visitService;
     private final PetService petService;
 
-    public VisitController(VisitService visitService, @Qualifier("petServiceFactory") PetService petService) {
+    public VisitController(VisitService visitService, @Qualifier("petSDJpaService") PetService petService) {
         this.visitService = visitService;
         this.petService = petService;
     }
