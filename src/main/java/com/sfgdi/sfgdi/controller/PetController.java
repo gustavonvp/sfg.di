@@ -30,7 +30,7 @@ public class PetController {
     private final PetTypeService petTypeService;
 
 
-    public PetController(@Qualifier("petServiceMap") PetService petService, OwnerService ownerService, PetTypeService petTypeService) {
+    public PetController(@Qualifier("petServiceFactory") PetService petService, OwnerService ownerService, PetTypeService petTypeService) {
         this.petService = petService;
         this.ownerService = ownerService;
         this.petTypeService = petTypeService;
@@ -56,6 +56,7 @@ public class PetController {
     public String initCreationForm(Owner owner, Model model) {
         Pet pet = new Pet();
         owner.getPets().add(pet);
+        pet.setOwner(owner);
         model.addAttribute("pet", pet);
         return VIEWS_PET_CREATE_OR_UPDATE_FORM;
     }

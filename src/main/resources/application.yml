@@ -9,6 +9,9 @@ spring:
       - ES
       - dev
       - map
+      - factory
+  main:
+    allow-bean-definition-overriding: true
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test

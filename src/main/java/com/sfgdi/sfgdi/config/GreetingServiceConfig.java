@@ -26,6 +26,7 @@ public class GreetingServiceConfig {
         return fakeDataSource;
     }
 
+    @Profile("factory")
     @Bean
     PetServiceFactory petServiceFactory() {
         return new PetServiceFactory();
