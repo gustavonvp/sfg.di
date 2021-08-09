@@ -218,7 +218,7 @@
 
         <configuration>
             <argLine>
-                --illegal-acess=permit
+                --illegal-access=permit
             </argLine>
         </configuration>
 
