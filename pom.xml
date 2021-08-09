@@ -15,7 +15,10 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
+        <project.build.sourceEnconding>UTF-8</project.build.sourceEnconding>
+        <project.reporting.outputEnconding>UTF-8</project.reporting.outputEnconding>
         <java.version>11</java.version>
+       <jaxb.version>2.3.0</jaxb.version>
 
         <!-- Web dependencies -->
         <webjars-bootstrap.version>3.3.6</webjars-bootstrap.version>
@@ -23,10 +26,31 @@
         <webjars-jquery.version>2.2.4</webjars-jquery.version>
         <wro4j.version>1.8.0</wro4j.version>
 
+
 <!--        <jacoco.version>0.8.5</jacoco.version>-->
 
     </properties>
+
         <dependencies>
+
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-core</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+
             <!-- Spring and Spring Boot dependencies -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -123,6 +147,13 @@
                 <artifactId>spring-boot-devtools</artifactId>
                 <optional>true</optional>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+            </dependency>
+
         </dependencies>
 <build>
 <plugins>
@@ -149,6 +180,57 @@
 
     <!-- Spring Boot Actuator displays build-related information if a git.properties
       file is present at the classpath -->
+
+    <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+    </plugin>
+
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <configuration>
+                <goal>install</goal>
+            <autoVersionSubmodules>true</autoVersionSubmodules>
+        </configuration>
+    </plugin>
+
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.0</version>
+
+        <configuration>
+            <argLine>
+                --illegal-acess=permit
+            </argLine>
+        </configuration>
+
+    </plugin>
+
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>2.22.1</version>
+        <configuration>
+            <argLine>
+                --illegal-access=permit
+            </argLine>
+        </configuration>
+
+        <executions>
+            <execution>
+                <goals>
+                    <goal>integration-test</goal>
+                    <goal>verify</goal>
+                </goals>
+            </execution>
+
+        </executions>
+
+    </plugin>
+
+
     <plugin>
         <groupId>pl.project13.maven</groupId>
         <artifactId>git-commit-id-plugin</artifactId>
