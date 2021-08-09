@@ -37,10 +37,4 @@ public  class DogPetService implements PetService {
 
     }
 
-    @Override
-    public PetService getPetService(String petType) {
-
-        petType = "";
-        return getPetService(petType);
-    }
 }

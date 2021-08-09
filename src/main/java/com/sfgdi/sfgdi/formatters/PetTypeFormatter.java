@@ -26,7 +26,7 @@ public class PetTypeFormatter implements Formatter<PetType> {
     public PetType parse(String text, Locale locale) throws ParseException {
         Collection<PetType> findPetTypes = petTypeService.findALl();
         for(PetType type : findPetTypes) {
-            if(type.getName().equals(text)) {
+            if(type.getName().equals("[PetType" + "(name=" + text + ")]")) {
                 return type;
             }
         }

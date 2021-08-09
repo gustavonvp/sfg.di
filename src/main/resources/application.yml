@@ -9,9 +9,9 @@ spring:
       - ES
       - dev
       - springdatajpa
-
-
-#  main:
+  messages:
+    basename: messages/messages_es
+  #  main:
 #    allow-bean-definition-overriding: true
   datasource:
     driverClassName: com.mysql.jdbc.Driver

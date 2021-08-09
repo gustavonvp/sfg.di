@@ -37,9 +37,4 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetS
     }
 
 
-    @Override
-    public PetService getPetService(String petType) {
-        petType = "";
-        return getPetService(petType);
-    }
 }
