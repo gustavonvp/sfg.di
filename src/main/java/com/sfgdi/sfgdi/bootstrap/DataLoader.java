@@ -36,15 +36,15 @@ public class DataLoader implements CommandLineRunner {
         }
     }
         private void loadData () {
-//            PetType dog = new PetType();
-//            dog.setName("Dog");
-//            dog.getName();
-//            PetType savedDogPetType = petTypeService.save(dog);
-//
-//            PetType cat = new PetType();
-//            cat.setName("Cat");
-//            cat.getName();
-//            PetType savedCatPetType = petTypeService.save(cat);
+            PetType dog = new PetType();
+            dog.setName("Dog");
+            dog.getName();
+            PetType savedDogPetType = petTypeService.save(dog);
+
+            PetType cat = new PetType();
+            cat.setName("Cat");
+            cat.getName();
+            PetType savedCatPetType = petTypeService.save(cat);
 
             System.out.println(" ---- Specialities ----");
 
@@ -69,7 +69,7 @@ public class DataLoader implements CommandLineRunner {
             owner1.setTelephone("12345676");
 
             Pet mikesPet = new Pet();
-            //mikesPet.setPetType(savedDogPetType);
+            mikesPet.setPetType(savedDogPetType);
             mikesPet.setOwner(owner1);
             mikesPet.setBirthDate(LocalDate.now());
             mikesPet.setName("Rosco");
@@ -88,7 +88,7 @@ public class DataLoader implements CommandLineRunner {
             fionasCat.setName("Just Cat");
             fionasCat.setOwner(owner2);
             fionasCat.setBirthDate(LocalDate.now());
-           // fionasCat.setPetType(savedCatPetType);
+            fionasCat.setPetType(savedCatPetType);
             owner1.getPets().add(fionasCat);
 
             ownerService.save(owner2);

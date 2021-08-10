@@ -32,7 +32,7 @@ public class Pet extends BaseEntity {
     @Column(name = "name")
     private String name;
 
-    @ManyToOne(cascade = CascadeType.DETACH)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name ="type_id")
     private PetType petType;
 
