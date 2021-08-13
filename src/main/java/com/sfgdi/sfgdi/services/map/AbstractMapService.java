@@ -1,6 +1,7 @@
 package com.sfgdi.sfgdi.services.map;
 
 import com.sfgdi.sfgdi.model.BaseEntity;
+import com.sfgdi.sfgdi.model.Pet;
 import org.springframework.context.annotation.Primary;
 
 import java.util.*;

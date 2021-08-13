@@ -10,10 +10,10 @@ import java.util.Set;
 
 @Service
 @Profile("map")
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService  {
 
     @Override
-    public Set<Pet> findALl() {
+    public Set<Pet> findAll() {
         return super.findAll();
     }
 
@@ -36,8 +36,4 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetS
         super.deleteById(id);
     }
 
-    @Override
-    public String getPetType() {
-        return null;
-    }
 }

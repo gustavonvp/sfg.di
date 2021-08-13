@@ -2,20 +2,18 @@ package com.sfgdi.pets;
 
 import com.sfgdi.sfgdi.model.Pet;
 import com.sfgdi.sfgdi.services.PetService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 
 import java.util.Set;
 
-//@Profile("dog")
 
 public  class DogPetService implements PetService {
-    @Override
-    public String getPetType() {
-        return "Dogs Are the Best!";
-    }
+
 
     @Override
-    public Set<Pet> findALl() {
+    public Set<Pet> findAll() {
         return null;
     }
 
@@ -38,4 +36,5 @@ public  class DogPetService implements PetService {
     public void deleteById(Long aLong) {
 
     }
+
 }

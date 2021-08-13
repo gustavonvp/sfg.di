@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -20,13 +21,13 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     private final PetService petService;
 
 
-    public OwnerServiceMap(PetTypeService petTypeService, @Qualifier("petServiceMap") PetService petService) {
+    public OwnerServiceMap(PetTypeService petTypeService, @Qualifier("petSDJpaService") PetService petService) {
         this.petTypeService = petTypeService;
         this.petService = petService;
     }
 
     @Override
-    public Set<Owner> findALl() {
+    public Set<Owner> findAll() {
         return super.findAll();
     }
 
@@ -78,5 +79,11 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
                 .findFirst()
                 .orElse(null);
 
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        //todo - impl
+        return null;
     }
 }

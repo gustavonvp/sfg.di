@@ -20,7 +20,7 @@ public class VisitSDJpaService implements VisitService {
     }
 
     @Override
-    public Set<Visit> findALl() {
+    public Set<Visit> findAll() {
         Set<Visit> visits = new HashSet<>();
 
         visitRepository.findAll().forEach(visits::add);
@@ -46,4 +46,5 @@ public class VisitSDJpaService implements VisitService {
     public void deleteById(Long aLong) {
         visitRepository.deleteById(aLong);
     }
+
 }

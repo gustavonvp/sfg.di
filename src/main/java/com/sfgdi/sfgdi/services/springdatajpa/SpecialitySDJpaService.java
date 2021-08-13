@@ -3,10 +3,14 @@ package com.sfgdi.sfgdi.services.springdatajpa;
 import com.sfgdi.sfgdi.model.Speciality;
 import com.sfgdi.sfgdi.repositories.SpecialtyRepository;
 import com.sfgdi.sfgdi.services.SpecialtyService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
+@Profile("springdatajpa")
 public class SpecialitySDJpaService implements SpecialtyService {
 
     private final SpecialtyRepository specialtyRepository;
@@ -16,7 +20,7 @@ public class SpecialitySDJpaService implements SpecialtyService {
     }
 
     @Override
-    public Set<Speciality> findALl() {
+    public Set<Speciality> findAll() {
         Set<Speciality> specialities = new HashSet<>();
         specialtyRepository.findAll().forEach(specialities::add);
         return specialities;
@@ -41,4 +45,5 @@ public class SpecialitySDJpaService implements SpecialtyService {
     public void deleteById(Long aLong) {
         specialtyRepository.deleteById(aLong);
     }
+
 }

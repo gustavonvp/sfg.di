@@ -20,7 +20,7 @@ public class VetSDJpaService implements VetService {
     }
 
     @Override
-    public Set<Vet> findALl() {
+    public Set<Vet> findAll() {
 
         Set<Vet> vets = new HashSet<>();
 
@@ -48,4 +48,5 @@ public class VetSDJpaService implements VetService {
     public void deleteById(Long aLong) {
         vetRepository.deleteById(aLong);
     }
+
 }
