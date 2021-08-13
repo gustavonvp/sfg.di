@@ -13,7 +13,7 @@ public  class DogPetService implements PetService {
 
 
     @Override
-    public Set<Pet> findALl() {
+    public Set<Pet> findAll() {
         return null;
     }
 

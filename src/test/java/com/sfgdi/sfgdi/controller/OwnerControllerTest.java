@@ -51,7 +51,7 @@ class OwnerControllerTest {
 
     @Test
     void listOwners() throws Exception {
-        when(ownerService.findALl()).thenReturn(owners);
+        when(ownerService.findAll()).thenReturn(owners);
 
         mockMvc.perform(get("/owners/index"))
                 .andExpect(status().isOk())
@@ -63,7 +63,7 @@ class OwnerControllerTest {
 
     @Test
     void  listOwnersByIndex() throws Exception {
-        when(ownerService.findALl()).thenReturn(owners);
+        when(ownerService.findAll()).thenReturn(owners);
 
         mockMvc.perform(get("/owners/index"))
                 .andExpect(status().isOk())

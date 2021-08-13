@@ -1,6 +1,7 @@
 package com.sfgdi.sfgdi.model;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -25,6 +26,7 @@ public class Visit extends BaseEntity{
     @JoinColumn(name = "pet_id")
     private Pet pet;
 
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     public LocalDate getDate() {
         return date;
     }

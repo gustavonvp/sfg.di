@@ -12,7 +12,7 @@ import java.util.Set;
 public class SpecialityMapsService extends AbstractMapService<Speciality, Long> implements SpecialtyService {
 
     @Override
-    public Set<Speciality> findALl() {
+    public Set<Speciality> findAll() {
         return super.findAll();
     }
 

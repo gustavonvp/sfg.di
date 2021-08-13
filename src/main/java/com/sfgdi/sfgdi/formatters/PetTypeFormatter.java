@@ -24,11 +24,10 @@ public class PetTypeFormatter implements Formatter<PetType> {
 
 
     public PetType parse(String text, Locale locale) throws ParseException {
-        Collection<PetType> findPetTypes = petTypeService.findALl();
+        Collection<PetType> findPetTypes = petTypeService.findAll();
         for(PetType type : findPetTypes) {
-            if(type.getName().contains(text)) {
+                type.getName().toString();
                 return type;
-            }
         }
         throw new ParseException("type not found: " + text, 0);
     }

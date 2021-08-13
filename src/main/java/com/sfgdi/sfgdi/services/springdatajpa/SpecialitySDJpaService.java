@@ -20,7 +20,7 @@ public class SpecialitySDJpaService implements SpecialtyService {
     }
 
     @Override
-    public Set<Speciality> findALl() {
+    public Set<Speciality> findAll() {
         Set<Speciality> specialities = new HashSet<>();
         specialtyRepository.findAll().forEach(specialities::add);
         return specialities;
@@ -45,4 +45,5 @@ public class SpecialitySDJpaService implements SpecialtyService {
     public void deleteById(Long aLong) {
         specialtyRepository.deleteById(aLong);
     }
+
 }

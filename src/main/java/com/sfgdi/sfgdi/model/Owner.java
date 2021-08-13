@@ -38,7 +38,7 @@ public class Owner extends Person {
     private Set<Pet> pets = new HashSet<>();
 
 
-    public Pet getPet(String name) {
+    public Pet getPets(String name) {
         return getPet(name, false);
     }
 

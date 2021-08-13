@@ -1,7 +1,6 @@
 package com.sfgdi.sfgdi.model;
 
 import lombok.*;
-import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;

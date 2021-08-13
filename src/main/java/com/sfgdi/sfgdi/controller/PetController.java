@@ -38,7 +38,7 @@ public class PetController {
 
     @ModelAttribute("types")
     public Collection<PetType> populatedPetTypes() {
-        return petTypeService.findALl();
+        return petTypeService.findAll();
     }
 
     @ModelAttribute("owner")
