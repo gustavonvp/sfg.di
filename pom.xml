@@ -171,7 +171,6 @@
         <execution>
             <goals>
                 <goal>cobertura-integration-test</goal>
-                <goal>instrument</goal>
             </goals>
         </execution>
         </executions>
