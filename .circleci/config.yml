@@ -33,11 +33,9 @@ jobs:
       - run: mvn install -DskipTests
       - save_cache:
           paths:
-            - "~/.m2"
+            - ~/.m2
           key: v1-dependencies-{{ checksum pom.xml }}
 
-      # Then run your tests!
-      - run: mvn install
       # run test with gen code coverage
       - run: mvn integration-test cobertura:cobertura
 
