@@ -17,7 +17,7 @@
     <properties>
         <project.build.sourceEnconding>UTF-8</project.build.sourceEnconding>
         <project.reporting.outputEnconding>UTF-8</project.reporting.outputEnconding>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
        <jaxb.version>2.3.0</jaxb.version>
 
         <!-- Web dependencies -->
@@ -140,7 +140,6 @@
         </dependencies>
 <build>
 <plugins>
-
     <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
@@ -153,6 +152,28 @@
                     <classifier>exec</classifier>
                 </configuration>
             </execution>
+        </executions>
+    </plugin>
+
+    <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>cobertura-maven-plugin</artifactId>
+        <version>2.7</version>
+        <configuration>
+            <formats>
+                <format>html</format>
+                <format>xml</format>
+            </formats>
+            <check />
+        </configuration>
+
+        <executions>
+        <execution>
+            <goals>
+                <goal>cobertura-integration-test</goal>
+                <goal>instrument</goal>
+            </goals>
+        </execution>
         </executions>
     </plugin>
 
@@ -194,11 +215,11 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.12.4</version>
 
-        <configuration>
-            <argLine>
-                --illegal-access=permit
-            </argLine>
-        </configuration>
+<!--        <configuration>-->
+<!--            <argLine>-->
+<!--                &#45;&#45;illegal-access=permit-->
+<!--            </argLine>-->
+<!--        </configuration>-->
 
     </plugin>
 
@@ -206,11 +227,11 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
         <version>2.22.2</version>
-        <configuration>
-            <argLine>
-                --illegal-access=permit
-            </argLine>
-        </configuration>
+<!--        <configuration>-->
+<!--            <argLine>-->
+<!--                &#45;&#45;illegal-access=permit-->
+<!--            </argLine>-->
+<!--        </configuration>-->
 
         <executions>
             <execution>
