@@ -45,7 +45,7 @@ jobs:
 
       - run:
           name: Send to CodeCov
-          command: cat config.yml | curl --data-binary @- https://codecov.io/validate
+          command: bash <(curl -s https://codecov.io/bash)
 
 workflows:
   # Below is the definition of your workflow.
